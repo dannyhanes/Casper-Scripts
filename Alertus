@@ -1,0 +1,6 @@
+#!/bin/sh
+
+killall Alertus\ Desktop
+rm -r /Library/Application\ Support/Alertus\ Technologies/
+
+exit 0;
