@@ -1,0 +1,12 @@
+#!/bin/sh
+#Silent Install using information in the installer.properties file
+sudo /Library/Application\ Support/SPSS/SPSS_Statistics_Installer.bin -f /Library/Application\ Support/SPSS/installer.properties > /dev/null 2>&1
+
+#Firewall exceptions
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --unblockapp /Applications/IBM/SPSS/Statistics/23/SPSSStatistics.app
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --add /Applications/IBM/SPSS/Statistics/23/SPSSStatistics.app
+
+#Cleanup
+sudo rm -r /Library/Application\ Support/SPSS23-Temp
+
+/usr/local/bin/dockutil --add /Applications/IBM/SPSS/Statistics/23/SPSSStatistics.app
