@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /Applications/NVivo.app/Contents/MacOs
+sudo ./NVivo -initialize xxxxx-xxxxx-xxxxx-xxxxx-xxxxx -activate Activation.xml
