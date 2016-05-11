@@ -1,4 +1,2 @@
-# Test
-Repo full of Casper stuff. 
-
-Install Google Chrome
+##### Install Google Chrome
+Download and install the latest version of Google Chrome
