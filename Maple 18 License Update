@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd /Library/Frameworks/Maple.framework/Versions/18/license
+rm -f license.dat
+
+cat <<EOF >license.dat 
+SERVER xxxxx.xxx.xxx ANY 27000
+USE_SERVER
+EOF
