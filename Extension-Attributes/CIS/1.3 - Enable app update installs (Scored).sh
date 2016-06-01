@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 RESULT=defaults read /Library/Preferences/com.apple.commerce AutoUpdate
 
