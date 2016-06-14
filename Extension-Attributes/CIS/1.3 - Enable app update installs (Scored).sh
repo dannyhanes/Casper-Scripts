@@ -1,8 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 
-#Ensure that application updates are installed after they are available from Apple. 
-#These updates do not require reboots or admin privileges for end users.
+# CIS Apple OS X 10.11 Benchmark V1.0.0
+# 1.3 Enable App Update Installs (Scored)
 
-RESULT=defaults read /Library/Preferences/com.apple.commerce AutoUpdate
+# Auto Update verifies that your system has the newest security patches and software updates. 
+# If "Automatically check for updates" is not selected background updates for new malware definition files from Apple for XProtect and Gatekeeper will not occur.
 
-echo "<result>$RESULT</result>"
+result="$(/usr/bin/defaults read /Library/Preferences/com.apple.commerce.plist AutoUpdate)"
+
+if [ -z "$result" ]; 
+        then echo "<result>---</result>"
+elif [ "$result" == 1 ] 
+        then echo "<result>Compliant</result>"
+else 
+        echo "<result>Failed</result>"
+fi
